@@ -1,7 +1,9 @@
 // This will can combine one or more Reducer functions and export it through Redux"s combineReducer helper.
 import { combineReducers } from "redux";
 import profile_details from "./profile/profile_reducer";
+import profileDetails from "./detailProfile/detailProfile_reducer";
 
 export default combineReducers({
-    profile_details
+    profile_details,
+    profileDetails
 });

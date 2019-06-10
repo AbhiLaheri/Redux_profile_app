@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import {
-//   setEmail,
+import {
+  getAllData, increment
 
-// } from "../../actions/login/login_action";
+} from "../action/profile_action";
 import Profile from "../components/profile";
 
 export class ProfileCont extends Component {
@@ -24,9 +24,12 @@ export const mapStateToProps = store => {
 export const mapDispatchToProps = dispatch => {
   return {
    
-    // setLogin: (store_token) => {
-    //   dispatch(setLogin(store_token));
-    // }
+    getAllData: () => {
+      dispatch(getAllData());
+    },
+    increment: (add) => {
+      dispatch(increment(add));
+    }
   };
 };
 
