@@ -21,7 +21,11 @@ export default class Profile extends Component {
     return (
       <div>
         <div style={{ width: "90%", margin: "20px auto" }}>
-          <h3 className="text-center ">Welcome</h3>
+          <h3 className="text-center ">Welcome </h3>
+          
+          {profile_details.alert?<div class="alert alert-success text-right" role="alert">Data Found</div>:<div class="alert alert-danger text-right" role="alert">Loding......</div>} 
+        
+         
           <div className="row">
             {profile_details.allUserdata.slice(0, profile_details.end).map(row => (
 

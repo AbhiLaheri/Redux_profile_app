@@ -7,14 +7,15 @@ import {
 const initial_state = {
   name: "Abhi",
   allUserdata: [],
-  end:4
+  end:4,
+  alert:false
  
 };
 
 export default function reducer(state = initial_state, action) {
   switch (action.type) {
     case SET_ALL_DATA:
-      return (state = { ...state, allUserdata: action.payload });
+      return (state = { ...state, allUserdata: action.payload, alert:true });
       case SET_ADD_ONE:
         return (state = { ...state, end: action.payload+1 });
    
