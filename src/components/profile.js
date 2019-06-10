@@ -22,10 +22,19 @@ export default class Profile extends Component {
       <div>
         <div style={{ width: "90%", margin: "20px auto" }}>
           <h3 className="text-center ">Welcome </h3>
-          
-          {profile_details.alert?<div class="alert alert-success text-right" role="alert">Data Found</div>:<div class="alert alert-danger text-right" role="alert">Loding......</div>} 
-        
-         
+
+          {profile_details.alert ? <div className="alert alert-success alert-dismissible fade show" role="alert">
+            Data Found
+            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> : <div className="alert alert-danger alert-dismissible fade show" role="alert">
+              Loding........
+              <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>}
+
           <div className="row">
             {profile_details.allUserdata.slice(0, profile_details.end).map(row => (
 
