@@ -22,7 +22,7 @@ export default class DetailProfile extends Component {
 
             <div className="col-sm-12 mt-2">
               <div className="card">
-                <img src={this.props.location.state.url} className="card-img-top shadow-sm" alt="..." style={{ height: 450, minWidth: 70 }} />
+                <img src={this.props.location.state.url} className="card-img-top shadow-sm" alt="..." style={{ height: 451, minWidth: 70 }} />
                 <div className="card-body">
                   <p className="card-text">{this.props.location.state.title}</p>
                 </div>
